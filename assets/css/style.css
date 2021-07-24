@@ -1,0 +1,339 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --blur: rgba(255, 255, 255, 0.1);
+    --scl: #3a6186;
+    --fcl: #89253e;
+    --width: 356px;
+    --height: 500px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: var(--white);
+    font-weight: 200;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+.main {
+    height: 100vh;
+    background: var(--scl);
+    background: -webkit-linear-gradient(to right, var(--fcl), var(--scl));
+    background: linear-gradient(to right, var(--fcl), var(--scl));
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio {
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--blur);
+    border-radius: 15px;
+    box-shadow: 3px 3px 40px rgb(0 0 0 / 50%),
+        -3px -3px 40px rgb(0 0 0 / 50%);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header span {
+    width: 50px;
+    background: var(--blur);
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 50%),
+        -3px -3px 10px rgb(0 0 0 / 50%);
+    cursor: pointer;
+}
+
+.image-wrapper {
+    width: 178px;
+    height: 178px;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.songinfo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.songinfo__name {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.progress-area {
+    width: 100%;
+    height: 6px;
+    background-color: var(--blur);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 0;
+    background: linear-gradient(to right, var(--fcl), var(--scl));
+    height: inherit;
+    border-radius: inherit;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control span {
+    width: 50px;
+    background: var(--blur);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 50%),
+        -3px -3px 10px rgb(0 0 0 / 50%);
+    cursor: pointer;
+}
+
+.control span:hover {
+    background: linear-gradient(to right, var(--scl), var(--fcl));
+}
+
+.header i,
+.control i {
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #4ECDC4;
+    background: #3a6186;
+    background: #b92b27;
+    background: #aa4b6b;
+    background: #c31432;
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #240b36, #c31432);
+    opacity: 0.8;
+
+}
+
+.control .play,
+.control .pause {
+    display: none;
+}
+
+.control .play.active,
+.control .pause.active {
+    display: flex;
+}
+
+.list {
+    width: calc(var(--width) + 100px);
+    height: var(--height);
+    background-color: var(--blur);
+    border-radius: 15px;
+    box-shadow: 3px 3px 40px rgb(0 0 0 / 50%),
+        -3px -3px 40px rgb(0 0 0 / 50%);
+    margin-left: 30px;
+    overflow: auto;
+}
+
+.list::-webkit-scrollbar {
+    width: 0;
+}
+
+.list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: inherit;
+    background: linear-gradient(to right, var(--fcl), var(--scl));
+    padding: 10px;
+    border-radius: 15px;
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+    z-index: 99;
+}
+
+.list-header i {
+    font-size: 30px;
+}
+
+.list-header p {
+    font-size: 23px;
+}
+
+.music-list {
+    margin-top: 50px;
+}
+
+.music-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.music-list li:hover {
+    background: linear-gradient(to right, var(--scl), var(--fcl));
+}
+
+.info-name {
+    margin-bottom: 5px;
+}
+
+.random.active,
+.loop.active {
+    background: linear-gradient(to right, var(--fcl), var(--scl));
+    color: var(--text);
+}
+
+.song.active {
+    background: linear-gradient(to right, var(--fcl), var(--scl));
+    pointer-events: none;
+}
+
+.song.active:hover {
+    cursor: default;
+    opacity: 1;
+}
+
+.close {
+    display: none;
+    width: 50px;
+    background: linear-gradient(to right, var(--fcl), var(--scl));
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 50%),
+        -3px -3px 10px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    font-size: 25px;
+}
+
+/* mobile & tablet */
+@media (max-width: 1023px) {}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {}
+
+/* mobile */
+@media (max-width: 740px) {
+    body {
+        overflow: unset;
+    }
+
+    .main {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .list {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        background: rgba(255, 255, 255, 0.9);
+        margin-left: 0;
+        transition: 0.5s;
+    }
+
+    .list-header {
+        display: none;
+    }
+
+    .music-list {
+        margin-top: 0;
+    }
+
+    .music-list li {
+        border-bottom: 1px solid var(--black);
+        border-radius: 15px;
+        color: var(--black);
+        cursor: pointer;
+    }
+
+    .control span:hover {
+        opacity: unset;
+    }
+
+    .header span {
+        display: flex;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .header h2 {
+        margin-left: 30px;
+    }
+
+    .close {
+        position: fixed;
+        right: -20px;
+        top: -20px;
+    }
+}

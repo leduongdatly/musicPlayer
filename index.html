@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powered by Dương</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div class="audio">
+                <div class="header">
+                    <span>
+                        <i class="fas fa-music"></i>
+                    </span>
+                    <h2>Đang phát</h2>
+                </div>
+                <div class="image-wrapper">
+                    <img src="" alt="">
+                </div>
+                <div class="songinfo">
+                    <p class="songinfo__name"></p>
+                    <p class="songinfo__singer"></p>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-bar">
+                        <audio id="audio" src=""></audio>
+                    </div>
+                </div>
+                <div class="timer">
+                    <p class="current">0:00</p>
+                    <p class="duration">4:00</p>
+                </div>
+                <div class="control">
+                    <span class="random">
+                        <i class="fas fa-random"></i>
+                    </span class="prev">
+                    <span class="prev">
+                        <i class="fas fa-step-backward"></i>
+                    </span>
+                    <span class="play active">
+                        <i class="fas fa-play"></i>
+                    </span>
+                    <span class="pause">
+                        <i class="fas fa-pause"></i>
+                    </span class="next">
+                    <span class="next">
+                        <i class="fas fa-step-forward"></i>
+                    </span>
+                    <span class="loop">
+                        <i class="fas fa-redo"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="close">
+                    <i class="far fa-times-circle"></i>
+                </div>
+                <div class="list-header">
+                    <i class="fas fa-compact-disc"></i>
+                    <p>Danh sách</p>
+                    <i class="fas fa-compact-disc"></i>
+                </div>
+                <ul class="music-list">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./assets/js/script.js"></script>
+
+</html>
