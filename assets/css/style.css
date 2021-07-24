@@ -230,9 +230,9 @@ body {
     cursor: pointer;
 }
 
-/* .music-list li:hover {
+.music-list li:hover {
     background: linear-gradient(to right, var(--scl), var(--fcl));
-} */
+}
 
 .info-name {
     margin-bottom: 5px;
