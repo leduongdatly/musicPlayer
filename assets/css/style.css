@@ -315,8 +315,7 @@ body {
     }
 
     .control span:hover {
-        opacity: unset;
-        background-color: unset;
+        opacity: 1 !important;
     }
 
     .header span {
