@@ -26,7 +26,7 @@ const music = [{
         name: 'Bâng khuâng',
         singer: 'Justa Tee',
         src: './assets/music/bangKhuang.mp3',
-        image: './assets/img/justatee.jpg'
+        image: './assets/img/justaTee.jpg'
     },
     {
         name: 'Cơn mơ băng giá',
